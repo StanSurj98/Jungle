@@ -1,2 +1,18 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<section class="dashboard">
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h1 class="card-title"><%= @category_count %> 🍀</h1>
+      <h3 class="card-subtitle mb-2 text-muted">Total Categories</h3>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h1 class="card-title"><%= @product_count %> 🪴</h1>
+      <h3 class="card-subtitle mb-2 text-muted">Total Products</h3>
+      <a href="#" class="card-link"><%= link_to "Overview", admin_products_path %></a>
+    </div>
+  </div>
+
+</section>
