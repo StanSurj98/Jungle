@@ -22,9 +22,10 @@ Rails.application.routes.draw do
 
   # Signing Up
   resources :users, only: [:create, :new]
+  
+  get '/logout' => 'sessions#destroy'
   # Loging In
-  resources :sessions, only: [:create, :new, :destroy]
-
+  resources :sessions, except: [:edit, :update, :show, :index]
 
 
 
