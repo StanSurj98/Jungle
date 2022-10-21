@@ -1,10 +1,10 @@
-<% data.each do |categories, num_of_prods| %>
+<% data.each do |categories, counts| %>
   <tr>
     <td>
-      <h4><%= categories.name %></h4>
+      <h5><%= categories.name %></h5>
     </td>
     <td>
-      <h4><%= num_of_prods %></h4>
+      <h5><%= counts %></h5>
     </td>
   </tr>
 <% end %>
