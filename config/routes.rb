@@ -20,8 +20,10 @@ Rails.application.routes.draw do
 
   resources :about, only: [:index]
 
+  # Signing Up
   resources :users, only: [:create, :new]
-
+  # Loging In
+  resources :sessions, only: [:create, :new, :destroy]
 
 
 
