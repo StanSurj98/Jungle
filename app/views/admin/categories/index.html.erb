@@ -12,13 +12,11 @@
 
     <table class="table table-bordered">
       <thead>
-        <tr>
-          <th colspan="2">Categories</th>
-          <th>Number of Products</th>
-        </tr>
+        <th>Categories</th>
+        <th>Number of Products</th>
       </thead>
       <tbody>
-        <%= render @categories %>
+          <%= render "category", data: @result  %>
       </tbody>
     </table>
 

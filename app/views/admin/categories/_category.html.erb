@@ -1,5 +1,10 @@
-<tr>
-  <td>
-    <h4><%= category.name %></h4>
-  </td>
-</tr>
+<% data.each do |categories, num_of_prods| %>
+  <tr>
+    <td>
+      <h4><%= categories.name %></h4>
+    </td>
+    <td>
+      <h4><%= num_of_prods %></h4>
+    </td>
+  </tr>
+<% end %>
