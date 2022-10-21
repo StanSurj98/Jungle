@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def current_user
-    # will assign if falsey, OR if already assigned, does nothing
+    # This line is weird, it assigns a randomized cookie session if not logged in, but if logged in will find the User in 'users' db and assign their id as cookie session.
+    # I think a lot of this line is bcrypt magic.
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
   # put into helper method so our views can access it

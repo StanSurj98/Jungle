@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   # Signing Up
   resources :users, only: [:create, :new]
   
+  # Logging Out, we had to use this vs the session_path sessions#destroy method for the top nave "link_to"
+  # Otherwise we get a routing error for some reason...
   get '/logout' => 'sessions#destroy'
   # Loging In
   resources :sessions, except: [:edit, :update, :show, :index]
