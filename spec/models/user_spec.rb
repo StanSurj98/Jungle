@@ -174,6 +174,51 @@ RSpec.describe User, type: :model do
 
   end
 
+  describe ".authenticate_with_credentials" do
+
+    context "given email and password" do
+      before do 
+        @user = User.new(
+          "first_name" => "John", 
+          "last_name" => "Doe", 
+          "email" => "john_doe@gmail.com", 
+          "password" => "password", 
+          "password_confirmation" => "password"
+        )
+        @user.save
+      end
+
+      it "should log users in if credentials match" do
+        user_test = User.authenticate_with_credentials("john_doe@gmail.com", "password")
+
+        expect(user_test).to be_present
+      end
+
+      it "should log users in with case insensitive emails" do
+        user_test = User.authenticate_with_credentials("jOHn_doe@gMAIl.com", "password")
+
+        expect(user_test).to be_present
+      end
+
+      it "should return nil if credentials don't match" do
+        user_test = User.authenticate_with_credentials("john_doe@gmail.com", "asdf")
+
+        expect(user_test).to be_nil
+      end
+
+      it "should log users in even if there are whitespaces at ends" do
+        user_test = User.authenticate_with_credentials(" joHN_doe@gmail.cOM ", "password")
+
+        expect(user_test).to be_present
+      end
+
+    end
+
+
+
+
+  end
+
 
 
 end
