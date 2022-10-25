@@ -31,6 +31,20 @@ RSpec.describe User, type: :model do
         expect(@user).to be_invalid
       end
 
+      it "raises an error if password is less than 3 characters" do
+        @user = User.new(
+          "first_name" => "John", 
+          "last_name" => "Doe", 
+          "email" => "john_doe@gmail.com", 
+          "password" => "p", 
+          "password_confirmation" => "p"
+        )
+        @user.save
+
+        expect(@user.errors.full_messages).to be_present
+      end
+
+
     end
 
     context "signing up through email" do
@@ -86,7 +100,7 @@ RSpec.describe User, type: :model do
 
         expect(@user.errors.full_messages).to be_present
       end
-      
+
       it "raises :first_name error if First Name is missing" do
         @user = User.new(
           "first_name" => nil, 
