@@ -1,5 +1,3 @@
-const configYargs = require("webpack-cli/bin/config/config-yargs");
-
 describe("user clicking a product", () => {
   beforeEach(() => {
     cy.visit("/");
