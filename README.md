@@ -41,7 +41,7 @@ On the landing page, users are greeted with a catalogue of products in the store
 
 !["Landing Page"](https://raw.githubusercontent.com/StanSurj98/Jungle/master/docs/Jungle-Landing_page.png)
 
-### Checking Out
+### View Cart & Check Out
 Clicking on the 'My Cart' icon brings a user to their checkout menu. Here users can modify their order by adding or subtracting quantities of products ordered. When ready, users may checkout with the 'Pay with Card' button. Our payments are handled via Stripe - for testing purposes please use the test card specified above. 
 
 !["My-Cart Page"](https://raw.githubusercontent.com/StanSurj98/Jungle/master/docs/Jungle-my_cart.png)
@@ -53,10 +53,11 @@ Hovering the 'Admin' button will drop a menu allowing users to see the dashboard
 
 Clicking products, users will be prompted by an HTTP auth box to access the page. Upon access, admins may create or delete a new product. Clicking categories show a similar page where admins may create categories.
 
-!["Admin's Product Catalogue"]()
+!["Admin's Product Catalogue"](https://raw.githubusercontent.com/StanSurj98/Jungle/master/docs/Jungle-Admin_productsPage.png)
 
 ### Login/Register
 Users may also register for an account with a bcrypt-secured password or log in to existing accounts via the nav-bar items. Logging in is not necessary for purchases in this test demo.
-[add image of register page] 
 
-### Thank you for trying out Jungle!
+!["Registration Page"](https://raw.githubusercontent.com/StanSurj98/Jungle/master/docs/Jungle-register.png)
+
+### Thank you for checking out Jungle!
