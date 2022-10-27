@@ -39,17 +39,21 @@ pass: "book"
 ### Landing Page
 On the landing page, users are greeted with a catalogue of products in the store. Clicking on any product will bring users to their respective information pages. Clicking the Add button on the product cards will add the product to the user's cart. A sold out badge is displayed for when a certain product is out of stock.
 
-[add image for landing page here]
+!["Landing Page"](https://raw.githubusercontent.com/StanSurj98/Jungle/master/docs/Jungle-Landing_page.png)
 
 ### Checking Out
 Clicking on the 'My Cart' icon brings a user to their checkout menu. Here users can modify their order by adding or subtracting quantities of products ordered. When ready, users may checkout with the 'Pay with Card' button. Our payments are handled via Stripe - for testing purposes please use the test card specified above. 
 
-[add image for checkout page]
+!["My-Cart Page"](https://raw.githubusercontent.com/StanSurj98/Jungle/master/docs/Jungle-my_cart.png)
 
 ### Admin Controls
-Hovering the 'Admin' button will drop a menu allowing users to see the dashboard, and the products catalogue from an Admin perspective. Clicking products, users will be prompted by an HTTP auth box to access the page. Upon access, admins may create or delete a new product. Clicking categories show a similar page where admins may create categories.
+Hovering the 'Admin' button will drop a menu allowing users to see the dashboard, and the products catalogue from an Admin perspective.
 
-[add image of admin products page]
+!["Admin Dashboard"](https://raw.githubusercontent.com/StanSurj98/Jungle/master/docs/Jungle-dashboard.png)
+
+Clicking products, users will be prompted by an HTTP auth box to access the page. Upon access, admins may create or delete a new product. Clicking categories show a similar page where admins may create categories.
+
+!["Admin's Product Catalogue"]()
 
 ### Login/Register
 Users may also register for an account with a bcrypt-secured password or log in to existing accounts via the nav-bar items. Logging in is not necessary for purchases in this test demo.
